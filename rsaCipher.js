@@ -44,7 +44,7 @@ const runRsaDemo = (testName, text, privateKeyInbound, publicKeyInbound) => {
     }
 
     let encrypted = key.encrypt(text, 'base64');
-
+    console.log("Mensagem criptografada: \n" + encrypted);
     switch (testName) {
         case 'privateKeyInbound':
             key.importKey(publicKeyInbound, 'pkcs1-public'); //also works with private key
@@ -77,12 +77,12 @@ publicKeyInbound - Quando se quer encryptar uma mensagem utilizando a chave púb
 privateKeyInbound - Quando se quer encryptar uma mensagem utilizando a chave privada e decryptá-lá utlizando a chave pública.
 generatePair - Quando se quer gerar as chaves pública e privada.
 */
-const testName = 'generatePair'; //or, publicKeyInbound, or, privateKeyInbound, or, generatePair
-/*Na linha 81 é necessário configurar o valor do parâmetro da função readFileSync, com o nome do arquivo contendo a mensagem á ser encryptada*/
+const testName = 'publicKeyInbound'; //or, publicKeyInbound, or, privateKeyInbound, or, generatePair
+/*Na linha 82 é necessário configurar o valor do parâmetro da função readFileSync, com o nome do arquivo contendo a mensagem á ser encryptada*/
 const text = fs.readFileSync('README').toString();
 /*Na linha 84 é necessário configurar o valor do parâmetro da função readFileSync, com o nome do arquivo contendo a chave privada*/
-const privateKeyInbound = fs.readFileSync('keys/test1').toString();
+const privateKeyInbound = fs.readFileSync('keys/yuri_priv').toString();
 /*Na linha 86 é necessário configurar o valor do parâmetro da função readFileSync, com o nome do arquivo contendo a chave pública*/
-const publicKeyInbound = fs.readFileSync('keys/test1.pem').toString();
+const publicKeyInbound = fs.readFileSync('keys/yuri_pub.pem').toString();
 
 runRsaDemo(testName, text, privateKeyInbound, publicKeyInbound);

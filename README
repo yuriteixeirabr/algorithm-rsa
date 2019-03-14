@@ -5,6 +5,6 @@ To test the project, execute the commands:
 npm install
 npm start
 
-To convert key .pub to .pem, execute the commands:
+To convert key .pub to .pem, execute the command:
 
 ssh-keygen -f keyName.pub -e -m pem > keyName.pem

@@ -1,0 +1,10 @@
+Algorithm rsa for generate keys, encrypt, decrypt and sign messages.
+
+To test the project, execute the commands:
+
+npm install
+npm start
+
+To convert key .pub to .pem, execute the commands:
+
+ssh-keygen -f keyName.pub -e -m pem > keyName.pem

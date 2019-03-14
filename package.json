@@ -1,0 +1,30 @@
+{
+  "name": "node-rsa-project",
+  "version": "1.0.0",
+  "description": "project to generate keys, encrypt, sign and decrypt messages",
+  "main": "rsaCipher.js",
+  "dependencies": {
+    "file-system": "^2.2.2",
+    "node-rsa": "^1.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node rsaCipher.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuriteixeirabr/algorithm-rsa.git"
+  },
+  "keywords": [
+    "node",
+    "rsa",
+    "algorithm",
+    "encryptation"
+  ],
+  "author": "Yuri Teixeira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuriteixeirabr/algorithm-rsa/issues"
+  },
+  "homepage": "https://github.com/yuriteixeirabr/algorithm-rsa#readme"
+}
